@@ -1,27 +1,49 @@
 <!DOCTYPE html>
-<html  lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Toast Four Corners</title>
-        <link href="output.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
-        <meta name="theme-color" content="#78350f">
-    </head>
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Four Corners</title>
+    <link href="output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#78350f">
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('mobile-drawer');
+            drawer.classList.toggle('translate-x-full'); // Slide-in animation
+        }
+    </script>
+</head>
+
 <body class="bg-orange-900 bg-opacity-5">
     <div class="flex w-full h-20 items-center bg-orange-50 justify-between sm:justify-center">
         <div class="ml-4 sm:text-center">
             <h1 class="text-2xl sister_font text-amber-900">Toast Four Corners</h1>
-            <h1 class="text-lg sister_font text-amber-700">Breakfast And Lunch in Storrs, CT</h1> </div>
-        <div class="mr-4">
-            <img src="../bars-solid (2).svg" class="h-10 sm:hidden">
+            <h1 class="text-lg sister_font text-amber-700">Breakfast And Lunch in Storrs, CT</h1>
         </div>
-        
+        <div class="mr-4">
+            <!-- Drawer Toggle Button -->
+            <img src="../bars-solid (2).svg" class="h-10 sm:hidden cursor-pointer" alt="Menu Icon" onclick="toggleDrawer()">
+        </div>
     </div>
 
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" 
+         class="fixed top-0 right-0 w-64 h-full bg-orange-50 shadow-lg transform translate-x-full transition-transform duration-300 sm:hidden z-50">
+        <div class="flex flex-col items-center p-4 space-y-4">
+            <button class="self-end text-4xl mb-4 text-amber-900 hover:text-amber-700" onclick="toggleDrawer()">&times;</button>
+            <a href="#" class="text-2xl sister_font hover:text-amber-700">Home</a>
+            <a href="#" class="text-2xl sister_font hover:text-amber-700">About Us</a>
+            <a href="#" class="text-2xl sister_font hover:text-amber-700">The Menu</a>
+            <a href="#" class="text-2xl sister_font hover:text-amber-700">Directions</a>
+            <a href="#" class="text-2xl sister_font hover:text-amber-700">What's New</a>
+            <a href="tel:+8604771557" class="text-2xl sister_font hover:text-amber-700"><img class="mt-10 h-10 text-center" src="../phone-solid.svg"></a>
+        </div>
+    </div>
+
+    <!-- Desktop Navigation -->
     <div class="flex border-2 max-sm:hidden w-full h-10 items-center justify-center gap-6">
         <div class="sister_font hover:cursor-pointer">Home</div>
         <div class="sister_font hover:cursor-pointer">About us</div>
@@ -29,48 +51,30 @@
         <div class="sister_font hover:cursor-pointer">Directions</div>
         <div class="sister_font hover:cursor-pointer">What's New</div>
     </div>
-    
-    <!-- Image and Quote -->
-    <div class="flex flex-col lg:flex-row  h-auto lg:h-96 p-4 gap-6 bg-orange-50">
-            <!-- Image Section -->
-            <div class="flex justify-center items-center lg:w-1/2  rounded-lg overflow-hidden">
-                <img src="../toast_inside.png" class="h-64 w-full object-cover">
-            </div>
-    
-            <!-- Quote Section -->
-            <div class="flex flex-col justify-center items-center text-center lg:w-1/2 p-4 border-2 rounded-lg bg-white shadow-lg">
-                <p class="sister_font text-base text-amber-900">
-                    Located in Storrs-Mansfield, CT, TOAST, Four Corners is <span class="font-bold">"your cornerstone to great food!"</span> 
-                    Our breads and muffins are fresh baked on site. Oh, and by the way - did we mention that we offer a full line of 
-                    <span class="text-green-700 font-semibold">Gluten free alternatives</span>?!
-                </p>
-                <p class="sister_font text-base text-amber-900 mt-4">
-                    Stop by and join us for a fresh brewed cup of coffee from our local coffee roaster and a meal that will have you 
-                    coming back for more! <span class="italic">We'll see you soon.</span>
-                </p>
-            </div>
-    </div>
-    <!-- Image and Quote -->
-    
-    <!-- Hours -->
-    <div class="sister_font flex flex-col lg:flex-row items-center justify-around w-full p-6 bg-orange-100 border-2 rounded-lg shadow-lg gap-10">
-    <!-- Weekday Hours -->
-    <div class="flex flex-col items-center text-center p-4 border-2 border-cyan-300 bg-white rounded-lg shadow-md w-full lg:w-1/2">
-        <h3 class="text-xl font-bold mb-2 text-amber-900">Monday - Friday</h3>
-        <p class="text-lg text-amber-700">7:00 AM - 1:30 PM</p>
-        <p class="text-sm text-amber-600 mt-2 italic">Lunch served after 11:30 AM</p>
-    </div>
-    <!-- Weekend Hours -->
-    <div class="flex flex-col items-center text-center p-4 border-2 border-cyan-300 bg-white rounded-lg shadow-md w-full lg:w-1/2">
-        <h3 class="text-xl font-bold mb-2 text-amber-900">Saturday and Sunday</h3>
-        <p class="text-lg text-amber-700">7:00 AM - 12:30 PM</p>
-        <p class="text-sm text-red-600 mt-2 font-semibold uppercase">Breakfast Only</p>
-    </div>
-    </div>
-    <!-- Hours -->
 
-            
-    <footer class="bg-amber-900 text-white py-6  border-2">
+    <!-- Main Content -->
+    <div class="flex flex-col lg:flex-row h-auto lg:h-96 p-4 gap-6 bg-orange-50">
+        <!-- Image Section -->
+        <div class="flex justify-center items-center lg:w-1/2 rounded-lg overflow-hidden">
+            <img src="../toast_inside.png" class="h-64 w-full object-cover" alt="Toast Interior">
+        </div>
+
+        <!-- Quote Section -->
+        <div class="flex flex-col justify-center items-center text-center lg:w-1/2 p-4 border-2 rounded-lg bg-white shadow-lg">
+            <p class="sister_font text-base text-amber-900">
+                Located in Storrs-Mansfield, CT, TOAST, Four Corners is <span class="font-bold">"your cornerstone to great food!"</span>
+                Our breads and muffins are fresh baked on site. Oh, and by the way - did we mention that we offer a full line of
+                <span class="text-green-700 font-semibold">Gluten free alternatives</span>?!
+            </p>
+            <p class="sister_font text-base text-amber-900 mt-4">
+                Stop by and join us for a fresh brewed cup of coffee from our local coffee roaster and a meal that will have you
+                coming back for more! <span class="italic">We'll see you soon.</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-6 border-2">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row justify-between items-center">
                 <!-- Company Info -->
@@ -80,11 +84,11 @@
                 </div>
                 <!-- Social Media -->
                 <div class="flex space-x-4 mb-4 lg:mb-0">
-                    <a href="#" class="hover:text-amber-300" aria-label="Facebook">
-                        <img class="h-8" src="../facebook-brands-solid.svg">
+                    <a href="https://www.facebook.com/ToastFourCorners/" class="hover:text-amber-300" aria-label="Facebook">
+                        <img class="h-8" src="../facebook-brands-solid.svg" alt="Facebook">
                     </a>
-                    <a href="#" class="hover:text-amber-300" aria-label="Instagram">
-                        <img class="h-8" src="../instagram-brands-solid.svg">
+                    <a href="https://www.instagram.com/toast_four_corners/" class="hover:text-amber-300" aria-label="Instagram">
+                        <img class="h-8" src="../instagram-brands-solid.svg" alt="Instagram">
                     </a>
                 </div>
             </div>
@@ -93,7 +97,5 @@
             <p class="text-center text-xs sister_font">Website designed by: Brandon Breuer</p>
         </div>
     </footer>
-
-    
 </body>
 </html>

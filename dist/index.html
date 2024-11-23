@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#78350f">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         function toggleDrawer() {
             const drawer = document.getElementById('mobile-drawer');
@@ -20,8 +22,8 @@
 <body class="bg-orange-900 bg-opacity-5">
     <div class="flex w-full h-20 items-center bg-orange-50 justify-between sm:justify-center">
         <div class="ml-4 sm:text-center">
-            <h1 class="text-2xl sister_font text-amber-900">Toast Four Corners</h1>
-            <h1 class="text-lg sister_font text-amber-700">Breakfast And Lunch in Storrs, CT</h1>
+            <h1 class="text-2xl sister_font text-amber-900" data-aos="fade-right" data-aos-duration="2000">Toast Four Corners</h1>
+            <h1 class="text-lg sister_font text-amber-700" data-aos="fade-right" data-aos-duration="2000">Breakfast And Lunch in Storrs, CT</h1>
         </div>
         <div class="mr-4">
             <!-- Drawer Toggle Button -->
@@ -76,13 +78,13 @@
      <!-- Hours -->
      <div class="sister_font flex flex-col lg:flex-row items-center justify-around w-full p-6 bg-orange-100 border-2 rounded-lg shadow-lg gap-10">
         <!-- Weekday Hours -->
-        <div class="flex flex-col items-center text-center p-4 border-2 border-cyan-300 bg-white rounded-lg shadow-md w-full lg:w-1/2">
+        <div class="flex flex-col items-center text-center p-4 border-2 border-cyan-300 bg-white rounded-lg shadow-md w-full lg:w-1/2"  data-aos="zoom-in-right"  data-aos-easing="linear" data-aos-duration="1000">
             <h3 class="text-xl font-bold mb-2 text-amber-900">Monday - Friday</h3>
             <p class="text-lg text-amber-700">7:00 AM - 1:30 PM</p>
             <p class="text-sm text-amber-600 mt-2 italic">Lunch served after 11:30 AM</p>
         </div>
         <!-- Weekend Hours -->
-        <div class="flex flex-col items-center text-center p-4 border-2 border-cyan-300 bg-white rounded-lg shadow-md w-full lg:w-1/2">
+        <div class="flex flex-col items-center text-center p-4 border-2 border-cyan-300 bg-white rounded-lg shadow-md w-full lg:w-1/2" data-aos="zoom-in-left"  data-aos-easing="linear" data-aos-duration="1000">
             <h3 class="text-xl font-bold mb-2 text-amber-900">Saturday and Sunday</h3>
             <p class="text-lg text-amber-700">7:00 AM - 12:30 PM</p>
             <p class="text-sm text-red-600 mt-2 font-semibold uppercase">Breakfast Only</p>
@@ -114,5 +116,9 @@
             <p class="text-center text-xs sister_font">Website designed by: Brandon Breuer</p>
         </div>
     </footer>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

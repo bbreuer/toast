@@ -670,6 +670,10 @@ video {
   height: 100%;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .w-64 {
   width: 16rem;
 }
@@ -947,12 +951,26 @@ video {
     display: none;
   }
 
+  .sm\:h-40 {
+    height: 10rem;
+  }
+
   .sm\:justify-center {
     justify-content: center;
   }
 
   .sm\:text-center {
     text-align: center;
+  }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
